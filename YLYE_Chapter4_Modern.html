@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 4 — The 1099 Nurse · Your License, Your Empire</title>
+</head>
+<body style="margin:0;background:#f4f3f0;">
+
+<!-- ============================================================= -->
+<!--  TEACHABLE INSTRUCTIONS                                       -->
+<!--  Open your lesson > add a "Code" / Custom HTML block, then    -->
+<!--  copy EVERYTHING between the two markers below into it.       -->
+<!--  (Do NOT copy the <!DOCTYPE>, <html>, <head> or <body> tags.) -->
+<!-- ============================================================= -->
+
+<!-- ========================== PASTE START ========================== -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+.yle{
+  --gold:#C8A150;--gold-light:#E4C67E;--gold-deep:#9A7322;
+  --bg:#0C0C0E;--panel:#16161A;--panel-2:#1B1B21;--hair:rgba(255,255,255,.09);
+  --text:#EDEAE3;--muted:#9C988D;--faint:#6E6B63;--white:#FFFFFF;
+  --teal:#3FC7B4;--violet:#9A86F0;--coral:#F0796B;--pink:#E8729F;--sky:#56AEDE;--amber:#E8B24C;--sage:#4FCB93;
+  background:var(--bg);color:var(--text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:18px;line-height:1.82;font-weight:400;-webkit-font-smoothing:antialiased;
+  max-width:880px;width:100%;margin:0 auto;border-radius:22px;overflow:hidden;
+  text-align:left;letter-spacing:.002em;
+}
+.yle *,.yle *::before,.yle *::after{box-sizing:border-box;margin:0;padding:0}
+.yle button{font:inherit;background:none;border:none;color:inherit;cursor:pointer;letter-spacing:inherit}
+.yle a{color:inherit;text-decoration:none}
+.yle input{font:inherit}
+.yle ::selection{background:rgba(200,161,80,.3);color:#fff}
+
+.yle-body{padding:6px 44px 76px}
+.yle-read{max-width:660px;margin:0 auto}
+
+.yle-anim .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1)}
+.yle-anim .reveal.visible{opacity:1;transform:none}
+.yle-shown .reveal{opacity:1!important;transform:none!important;transition:none!important}
+.yle-shown .ring-card,.yle-shown .qcal-card,.yle-shown .account-card,.yle-shown .hi-card,.yle-shown .ded-card{opacity:1!important;transform:none!important;transition:none!important}
+
+/* HERO */
+.yle-hero{position:relative;overflow:hidden}
+.yle-hero-bg{position:absolute;inset:0;background:repeating-linear-gradient(135deg,#141419 0,#141419 13px,#191920 13px,#191920 26px)}
+.yle-hero-grad{position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 0%,rgba(200,161,80,.16),transparent 60%),linear-gradient(180deg,rgba(12,12,14,.55) 0%,rgba(12,12,14,.78) 55%,rgba(12,12,14,.97) 100%)}
+.yle-hero-inner{position:relative;z-index:2;padding:86px 40px 78px;text-align:center}
+.cover-eyebrow{font-size:11px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:42px}
+.cover-title-main{font-family:'Playfair Display',serif;font-size:54px;font-weight:900;color:#fff;line-height:1.02;display:block;letter-spacing:-.01em}
+.cover-title-gold{font-family:'Playfair Display',serif;font-size:54px;font-weight:600;font-style:italic;color:var(--gold-light);line-height:1.1;display:block}
+.cover-rule{width:54px;height:1px;background:var(--gold);margin:30px auto}
+.cover-chapter-label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.cover-chapter-title{font-family:'Playfair Display',serif;font-size:30px;font-weight:600;color:#fff;line-height:1.25;margin-bottom:28px}
+.cover-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:var(--gold-light);max-width:540px;margin:0 auto 34px;line-height:1.6;padding:20px 0;border-top:1px solid rgba(200,161,80,.28);border-bottom:1px solid rgba(200,161,80,.28)}
+.cover-byline{font-size:12px;color:var(--faint);letter-spacing:.08em}
+
+/* SECTION DIVIDER */
+.yle-sec{display:flex;align-items:baseline;gap:16px;margin:78px 0 26px}
+.yle-sec-idx{font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:var(--gold);flex-shrink:0}
+.yle-sec-label{font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex-shrink:0}
+.yle-sec-line{flex:1;height:1px;background:linear-gradient(90deg,var(--hair),transparent)}
+
+/* TYPE */
+.yle h2{font-family:'Playfair Display',serif;font-size:33px;font-weight:700;color:#fff;line-height:1.18;margin-bottom:22px;letter-spacing:-.01em;text-wrap:balance}
+.yle h3{font-size:13px;font-weight:600;color:var(--gold);letter-spacing:.16em;text-transform:uppercase;margin:34px 0 12px}
+.yle p{margin-bottom:20px;color:var(--text);font-size:18px;line-height:1.82;text-wrap:pretty}
+.yle p strong{color:#fff;font-weight:600}
+.yle-lead{font-size:20px;color:#fff;line-height:1.7}
+
+.callout{border-left:2px solid var(--gold);padding:22px 26px;background:linear-gradient(135deg,rgba(200,161,80,.07),rgba(200,161,80,.02));border-radius:0 10px 10px 0;margin:34px 0;font-size:17px;color:var(--text);line-height:1.7}
+.callout strong{color:var(--gold);font-weight:600;display:block;margin-bottom:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.warning-box{border-left:2px solid var(--coral);padding:22px 26px;background:rgba(240,121,107,.06);border-radius:0 10px 10px 0;margin:34px 0;font-size:16.5px;color:var(--text);line-height:1.7}
+.warning-box strong{color:var(--coral);font-weight:600;display:block;margin-bottom:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.key-point{background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:30px 34px;margin:42px 0}
+.key-point p{color:var(--text);font-size:19px;font-weight:400;line-height:1.65;margin:0}
+.key-point p em{color:var(--gold-light);font-style:italic}
+
+.fig-label{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 16px;display:flex;align-items:center;gap:12px}
+.fig-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(200,161,80,.3),transparent)}
+.fig-note{font-size:12px;color:var(--faint);margin-top:14px;line-height:1.55;font-style:italic}
+
+/* STAT RINGS */
+.stat-rings{background:var(--panel);border:1px solid var(--hair);border-radius:18px;padding:36px 28px;margin:8px 0 8px}
+.stat-rings-title{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:30px;text-align:center;font-weight:600}
+.rings-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ring-card{display:flex;flex-direction:column;align-items:center;gap:12px}
+.yle-anim .ring-card{opacity:0;transform:scale(.92);transition:opacity .5s ease,transform .5s ease}
+.yle-anim .ring-card.animated{opacity:1;transform:none}
+.ring-outer{width:96px;height:96px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--hair);position:relative}
+.ring-outer::after{content:'';position:absolute;inset:-2px;border-radius:50%;border:2px solid transparent}
+.ro1::after{border-top-color:var(--violet);border-right-color:var(--violet)}
+.ro2::after{border-top-color:var(--gold);border-right-color:var(--gold);border-bottom-color:var(--gold)}
+.ro3::after{border-top-color:var(--teal);border-right-color:var(--teal)}
+.ro4::after{border-top-color:var(--coral);border-right-color:var(--coral);border-bottom-color:var(--coral);border-left-color:var(--coral)}
+.ring-inner{text-align:center}
+.ring-pct{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;line-height:1;display:block}
+.ring-unit{font-size:9px;color:var(--muted);display:block;margin-top:3px;letter-spacing:.04em}
+.ro1 .ring-pct{color:var(--violet)}.ro2 .ring-pct{color:var(--gold-light)}.ro3 .ring-pct{color:var(--teal)}.ro4 .ring-pct{color:var(--coral)}
+.ring-label{font-size:12px;font-weight:600;color:var(--text);text-align:center;line-height:1.4}
+.ring-sub{font-size:11px;color:var(--muted);text-align:center;line-height:1.45}
+
+/* TAX BREAKDOWN BARS */
+.tax-vis{background:var(--panel);border:1px solid var(--hair);border-radius:18px;padding:32px 28px;margin:8px 0 8px}
+.tax-bars-wrap{display:flex;flex-direction:column;gap:18px}
+.tax-bar-meta{display:flex;justify-content:space-between;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.tax-bar-label{font-size:13.5px;font-weight:600;color:var(--text)}
+.tax-bar-pct{font-size:13px;font-weight:600}
+.tax-track{height:13px;background:rgba(255,255,255,.05);border-radius:7px;overflow:hidden}
+.tax-fill{height:100%;border-radius:7px;width:0;transition:width 1.2s cubic-bezier(.3,.7,.2,1)}
+.tax-compare{margin-top:24px;padding-top:20px;border-top:1px solid var(--hair);display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tc-card{background:rgba(255,255,255,.025);border-radius:12px;padding:18px;border:1px solid var(--hair)}
+.tc-card.hl{background:rgba(200,161,80,.07);border-color:rgba(200,161,80,.28)}
+.tc-label{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+.tc-card.hl .tc-label{color:var(--gold)}
+.tc-val{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--muted)}
+.tc-card.hl .tc-val{color:var(--gold-light)}
+.tc-note{font-size:12px;color:var(--faint);margin-top:5px;line-height:1.45}
+
+/* CALCULATOR */
+.calculator{background:var(--panel);border:1px solid rgba(200,161,80,.22);border-radius:18px;padding:34px 30px;margin:8px 0 8px}
+.calc-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--gold-light);margin-bottom:6px}
+.calc-sub{font-size:14px;color:var(--muted);margin-bottom:26px;line-height:1.6}
+.calc-input-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+.calc-input-group{display:flex;flex-direction:column;gap:8px}
+.calc-label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.calc-input{background:rgba(255,255,255,.05);border:1px solid var(--hair);border-radius:10px;padding:14px 16px;font-size:18px;font-weight:700;color:#fff;width:100%;outline:none;transition:border-color .2s}
+.calc-input:focus{border-color:var(--gold)}
+.calc-input::placeholder{color:var(--faint);font-weight:400;font-size:14px}
+.calc-btn{width:100%;padding:16px;background:var(--gold);border-radius:12px;font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#1a1407;transition:background .2s,transform .1s;margin-bottom:8px}
+.calc-btn:hover{background:var(--gold-light);transform:translateY(-1px)}
+.calc-error{display:none;color:var(--coral);font-size:13px;margin-bottom:18px;text-align:center}
+.calc-error.show{display:block}
+.calc-results{display:none;gap:12px;margin-top:20px}
+.calc-results.show{display:grid;grid-template-columns:repeat(2,1fr)}
+.calc-rcard{background:rgba(255,255,255,.03);border-radius:12px;padding:18px 16px;border:1px solid var(--hair)}
+.calc-rcard.hl{border-color:rgba(200,161,80,.4);background:rgba(200,161,80,.08)}
+.cr-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:block}
+.cr-value{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--text);display:block;margin-bottom:4px}
+.v-gold{color:var(--gold-light)}.v-teal{color:var(--teal)}.v-coral{color:var(--coral)}.v-violet{color:var(--violet)}
+.cr-note{font-size:12px;color:var(--muted);line-height:1.5}
+.calc-breakdown{margin-top:14px;padding:18px;background:rgba(255,255,255,.025);border-radius:12px;border:1px solid var(--hair);display:none}
+.calc-breakdown.show{display:block}
+.breakdown-title{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:600}
+.breakdown-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--hair);font-size:13px;gap:10px}
+.breakdown-row:last-child{border-bottom:none}
+.br-label{color:var(--muted)}
+.br-value{font-weight:700;color:var(--text)}
+.br-value.red{color:var(--coral)}.br-value.green{color:var(--sage)}
+.calc-disclaimer{font-size:11px;color:var(--faint);margin-top:16px;font-style:italic;text-align:center;line-height:1.5}
+
+/* QUARTERLY CALENDAR */
+.qcal{background:var(--panel);border:1px solid var(--hair);border-radius:18px;padding:32px 28px;margin:8px 0 8px}
+.qcal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.qcal-card{border-radius:14px;overflow:hidden;text-align:center}
+.yle-anim .qcal-card{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.yle-anim .qcal-card.animated{opacity:1;transform:none}
+.qcal-top{padding:16px 12px 13px}
+.qc1 .qcal-top{background:linear-gradient(135deg,#5d4bc0,var(--violet))}
+.qc2 .qcal-top{background:linear-gradient(135deg,var(--gold-deep),var(--gold))}
+.qc3 .qcal-top{background:linear-gradient(135deg,#1f9486,var(--teal))}
+.qc4 .qcal-top{background:linear-gradient(135deg,#c0493b,var(--coral))}
+.qcal-quarter{font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:6px}
+.qcal-date{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:#fff;line-height:1.1}
+.qcal-body{background:rgba(255,255,255,.03);padding:13px;border:1px solid var(--hair);border-top:none;border-radius:0 0 14px 14px}
+.qcal-period{font-size:11px;color:var(--muted);margin-bottom:7px;line-height:1.4}
+.qcal-tip{font-size:11px;color:var(--text);line-height:1.45}
+.qcal-pay{margin-top:20px;padding:14px 18px;background:rgba(200,161,80,.07);border-radius:10px;border:1px solid rgba(200,161,80,.2)}
+.qcal-pay b{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
+.qcal-pay span{font-size:13px;color:var(--text)}
+
+/* THREE ACCOUNTS */
+.three-accounts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 8px}
+.account-card{background:var(--panel);border:1px solid var(--hair);border-radius:16px;overflow:hidden}
+.yle-anim .account-card{opacity:0;transform:scale(.95);transition:opacity .5s ease,transform .5s ease}
+.yle-anim .account-card.animated{opacity:1;transform:none}
+.ac-top{padding:20px 18px 16px;position:relative}
+.ac1 .ac-top{background:linear-gradient(135deg,rgba(154,134,240,.22),rgba(154,134,240,.05))}
+.ac2 .ac-top{background:linear-gradient(135deg,rgba(200,161,80,.22),rgba(200,161,80,.05))}
+.ac3 .ac-top{background:linear-gradient(135deg,rgba(63,199,180,.22),rgba(63,199,180,.05))}
+.ac-num{font-family:'Playfair Display',serif;font-size:46px;font-weight:900;line-height:1;position:absolute;right:18px;top:14px;opacity:.16}
+.ac1 .ac-num{color:var(--violet)}.ac2 .ac-num{color:var(--gold)}.ac3 .ac-num{color:var(--teal)}
+.ac-name{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+.ac-type{font-size:12px;font-style:italic}
+.ac1 .ac-type{color:var(--violet)}.ac2 .ac-type{color:var(--gold)}.ac3 .ac-type{color:var(--teal)}
+.ac-body{padding:18px}
+.ac-rule{font-size:15.5px;font-weight:600;color:#fff;margin-bottom:9px;line-height:1.35}
+.ac-desc{font-size:12.5px;color:var(--muted);line-height:1.62}
+
+/* RETIREMENT */
+.retirement-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 8px}
+.ret-card{background:var(--panel);border:1px solid var(--hair);border-radius:16px;overflow:hidden}
+.ret-top{padding:20px;}
+.ret-top.r1{background:linear-gradient(135deg,rgba(154,134,240,.18),transparent)}
+.ret-top.r2{background:linear-gradient(135deg,rgba(63,199,180,.18),transparent)}
+.ret-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:5px}
+.r1 .ret-name{color:var(--violet)}.r2 .ret-name{color:var(--teal)}
+.ret-tagline{font-size:12px;color:var(--muted);line-height:1.4}
+.ret-body{padding:8px 20px 18px}
+.ret-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--hair)}
+.ret-row:last-child{border-bottom:none}
+.ret-rl{font-size:13px;color:var(--muted)}
+.ret-rv{font-size:13.5px;font-weight:700;color:var(--text);text-align:right}
+.ret-rv.big{font-family:'Playfair Display',serif;font-size:18px;font-weight:900}
+.r1 .ret-rv.big{color:var(--violet)}.r2 .ret-rv.big{color:var(--teal)}
+
+/* HEALTH INSURANCE */
+.hi-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:8px 0 8px}
+.hi-card{background:var(--panel);border:1px solid var(--hair);border-radius:14px;padding:20px 18px;display:flex;gap:14px;align-items:flex-start}
+.yle-anim .hi-card{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.yle-anim .hi-card.animated{opacity:1;transform:none}
+.hi-stripe{width:3px;border-radius:3px;flex-shrink:0;align-self:stretch}
+.hi-s1{background:var(--gold)}.hi-s2{background:var(--teal)}.hi-s3{background:var(--violet)}.hi-s4{background:var(--coral)}
+.hi-name{font-size:14px;font-weight:700;color:#fff;margin-bottom:5px;line-height:1.3}
+.hi-desc{font-size:12.5px;color:var(--muted);line-height:1.55;margin-bottom:10px}
+.hi-cost{font-size:11.5px;font-weight:600;padding:4px 11px;border-radius:20px;display:inline-block}
+.hi-card:nth-child(1) .hi-cost{background:rgba(200,161,80,.14);color:var(--gold-light)}
+.hi-card:nth-child(2) .hi-cost{background:rgba(63,199,180,.14);color:var(--teal)}
+.hi-card:nth-child(3) .hi-cost{background:rgba(154,134,240,.14);color:var(--violet)}
+.hi-card:nth-child(4) .hi-cost{background:rgba(240,121,107,.14);color:var(--coral)}
+
+/* DEDUCTIONS */
+.ded-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px;margin:8px 0 8px}
+.ded-card{background:var(--panel);border:1px solid var(--hair);border-radius:12px;padding:18px 16px}
+.yle-anim .ded-card{opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}
+.yle-anim .ded-card.animated{opacity:1;transform:none}
+.ded-idx{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:var(--faint);display:block;margin-bottom:8px}
+.ded-name{font-size:13.5px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.3}
+.ded-detail{font-size:11.5px;color:var(--muted);line-height:1.55}
+
+/* TOC / OBJECTIVE / DASHBOARD / WORKBOOK / SHIFT / QUIZ / SUMMARY / ACTION / RJ / CTA */
+.toc-panel{background:var(--panel);border-radius:18px;padding:30px;margin:0 0 12px;border:1px solid var(--hair)}
+.toc-panel-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:#fff;margin-bottom:6px}
+.toc-panel-sub{font-size:14.5px;color:var(--muted);margin-bottom:22px;line-height:1.55}
+.toc-items{display:flex;flex-direction:column;gap:9px}
+.toc-item{display:flex;align-items:center;gap:16px;padding:14px 16px;background:rgba(255,255,255,.025);border-radius:11px;border:1px solid var(--hair);transition:all .2s}
+.toc-item:hover{border-color:rgba(200,161,80,.32);background:rgba(200,161,80,.05)}
+.toc-idx{font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--gold);min-width:26px}
+.toc-info{flex:1}
+.toc-t{font-size:14.5px;font-weight:600;color:var(--text);display:block}
+.toc-s{font-size:12.5px;color:var(--muted);display:block;margin-top:2px}
+.toc-arr{color:var(--gold);font-size:15px}
+
+.obj-panel{background:var(--panel);border-radius:18px;padding:34px 30px;margin:8px 0 14px;border:1px solid var(--hair)}
+.obj-kicker{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.obj-title{font-family:'Playfair Display',serif;font-size:25px;font-weight:600;color:#fff;margin-bottom:16px;line-height:1.32}
+.obj-text{font-size:15.5px;color:var(--muted);line-height:1.7;margin-bottom:24px}
+.obj-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:24px}
+.obj-stat{text-align:center;padding:20px 8px;background:rgba(255,255,255,.025);border-radius:12px;border:1px solid var(--hair)}
+.obj-stat b{font-family:'Playfair Display',serif;font-size:25px;font-weight:900;display:block;margin-bottom:6px}
+.os1 b{color:var(--violet)}.os2 b{color:var(--gold-light)}.os3 b{color:var(--coral)}.os4 b{color:var(--teal)}
+.obj-stat small{font-size:11px;color:var(--muted);letter-spacing:.02em}
+.obj-note{background:rgba(255,255,255,.025);border-radius:11px;padding:18px 20px;border:1px solid var(--hair)}
+.obj-note-label{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;font-weight:600}
+.obj-note p{font-size:14px;color:var(--muted);line-height:1.6;margin:0}
+
+.lesson-dash{background:var(--panel);border-radius:18px;padding:30px;margin:0 0 12px;border:1px solid var(--hair)}
+.ld-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px}
+.ld-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.ld-chips{display:flex;gap:8px;flex-wrap:wrap}
+.ld-chip{font-size:11px;font-weight:500;padding:6px 13px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid var(--hair);color:var(--muted);display:flex;align-items:center;gap:7px}
+.ld-dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.ld-sub{font-size:14.5px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+.int-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.int-card{border-radius:14px;padding:20px 18px;border:1px solid var(--hair);background:rgba(255,255,255,.025);transition:all .25s;text-align:left}
+.int-card:hover{border-color:rgba(200,161,80,.32)}
+.int-card.selected{border-color:var(--gold);background:rgba(200,161,80,.07)}
+.int-idx{font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--gold);display:block;margin-bottom:10px}
+.int-title{font-size:13px;font-weight:600;color:#fff;margin-bottom:7px;line-height:1.3}
+.int-text{font-size:12.5px;color:var(--muted);line-height:1.55}
+
+.wb-section{background:var(--panel);border:1px solid var(--hair);border-radius:18px;padding:30px;margin:0 0 12px}
+.wb-hdr{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;font-weight:600}
+.wb-title{font-family:'Playfair Display',serif;font-size:23px;font-weight:600;color:#fff;margin-bottom:14px}
+.wb-intro{font-size:14.5px;color:var(--muted);margin-bottom:22px;line-height:1.62}
+.wb-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.wb-field{display:flex;flex-direction:column;gap:8px}
+.wb-lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.wb-area{min-height:88px;width:100%;background:rgba(255,255,255,.04);border:1px solid var(--hair);border-radius:10px;padding:13px 15px;font-family:'Inter',sans-serif;font-size:14.5px;color:var(--text);line-height:1.6;resize:vertical;outline:none;transition:border-color .2s,box-shadow .2s}
+.wb-area:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,161,80,.12)}
+.wb-area::placeholder{color:var(--faint);font-size:13px}
+.wb-saved{font-size:10.5px;color:var(--muted);margin-top:12px;text-align:right;opacity:0;transition:opacity .3s;letter-spacing:.04em}
+.wb-saved.show{opacity:1}
+
+.shift-section{margin:0 0 12px}
+.shift-lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;font-weight:600}
+.shift-sub{font-size:14.5px;color:var(--muted);margin-bottom:18px;line-height:1.55}
+.shift-cards-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.shift-c{border-radius:14px;overflow:hidden;border:1px solid var(--hair);background:var(--panel);transition:all .3s;display:flex;flex-direction:column}
+.shift-c:hover{border-color:rgba(200,161,80,.32)}
+.shift-c.flipped{border-color:var(--gold);background:linear-gradient(135deg,rgba(200,161,80,.1),var(--panel))}
+.shift-face{padding:18px;flex:1;display:flex;flex-direction:column;gap:10px}
+.st-old{background:rgba(240,121,107,.13);color:var(--coral);font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;border-radius:20px;width:fit-content}
+.st-new{background:rgba(79,203,147,.14);color:var(--sage);font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;border-radius:20px;display:none;width:fit-content}
+.shift-c.flipped .st-old{display:none}
+.shift-c.flipped .st-new{display:inline-block}
+.shift-thinking{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:#fff;line-height:1.35;flex:1}
+.shift-hint{font-size:10px;color:var(--faint);letter-spacing:.04em}
+.shift-c.flipped .shift-hint{display:none}
+.shift-check{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:12px;color:#1a1407;opacity:0;transform:scale(.6);transition:all .3s;align-self:flex-end;margin-top:auto}
+.shift-c.flipped .shift-check{opacity:1;transform:scale(1)}
+
+.quiz-block{background:var(--panel);border-radius:16px;padding:30px;margin:18px 0;border:1px solid var(--hair)}
+.quiz-num{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:600}
+.quiz-q{font-family:'Playfair Display',serif;font-size:19px;font-weight:600;color:#fff;margin-bottom:20px;line-height:1.4}
+.quiz-opt{display:block;width:100%;text-align:left;padding:14px 18px;border-radius:11px;border:1px solid var(--hair);background:rgba(255,255,255,.03);color:var(--text);font-size:14.5px;margin-bottom:11px;transition:all .2s;line-height:1.5}
+.quiz-opt:hover:not(:disabled){border-color:rgba(200,161,80,.4);background:rgba(200,161,80,.05)}
+.quiz-opt.correct{border-color:var(--sage)!important;background:rgba(79,203,147,.12)!important;color:var(--sage)!important}
+.quiz-opt.wrong{border-color:var(--coral)!important;background:rgba(240,121,107,.1)!important;color:var(--coral)!important}
+.quiz-fb{display:none;margin-top:12px;padding:12px 16px;border-radius:9px;font-size:13px;line-height:1.55}
+.quiz-fb.show{display:block}
+.quiz-fb.ok{background:rgba(79,203,147,.12);color:var(--sage);border:1px solid rgba(79,203,147,.25)}
+.quiz-fb.no{background:rgba(240,121,107,.08);color:var(--coral);border:1px solid rgba(240,121,107,.2)}
+
+.summary-box{background:var(--panel);border-radius:18px;padding:38px 34px;margin:8px 0 12px;border:1px solid var(--hair)}
+.summary-title{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:26px;font-weight:600}
+.summary-item{display:flex;gap:18px;align-items:flex-start;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--hair)}
+.summary-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.sum-bullet{width:28px;height:28px;border-radius:50%;background:var(--gold);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:13px;font-weight:700;color:#1a1407;margin-top:2px}
+.sum-text{font-size:16px;color:var(--text);line-height:1.6}
+.sum-text strong{color:var(--gold-light);font-weight:600}
+
+.action-mission{background:linear-gradient(135deg,var(--panel),#1a140a);border:1px solid rgba(200,161,80,.25);border-radius:18px;padding:30px;margin:8px 0 12px}
+.am-lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;font-weight:600}
+.am-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:#fff;margin-bottom:5px}
+.am-sub{font-size:14.5px;color:var(--muted);margin-bottom:18px;line-height:1.55}
+.am-area{width:100%;min-height:72px;background:rgba(255,255,255,.05);border:1px solid rgba(200,161,80,.28);border-radius:10px;padding:14px 16px;font-family:'Inter',sans-serif;font-size:15px;color:var(--text);line-height:1.6;resize:vertical;outline:none}
+.am-area:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,161,80,.12)}
+.am-area::placeholder{color:var(--faint);font-size:14px}
+
+.rj{background:var(--panel);border:1px solid var(--hair);border-radius:18px;padding:30px;margin:24px 0 0}
+.rj-lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;font-weight:600}
+.rj-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:#fff;margin-bottom:16px;line-height:1.32}
+.rj-area{width:100%;min-height:100px;background:rgba(255,255,255,.04);border:1px solid var(--hair);border-radius:10px;padding:14px 16px;font-family:'Inter',sans-serif;font-size:15px;color:var(--text);line-height:1.7;resize:vertical;outline:none}
+.rj-area:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,161,80,.12)}
+.rj-area::placeholder{color:var(--faint);font-size:14px}
+.rj-note{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5}
+
+.chapter-cta{background:linear-gradient(135deg,var(--panel),#1a140a);border:1px solid rgba(200,161,80,.3);border-radius:18px;padding:42px 34px;text-align:center;margin:46px 0 0}
+.cta-pre{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:10px;font-weight:600}
+.cta-title{font-family:'Playfair Display',serif;font-size:29px;font-weight:600;color:var(--gold-light);margin-bottom:10px;line-height:1.22}
+.cta-sub{font-size:14.5px;color:var(--muted);margin:0}
+.footer-credit{text-align:center;font-size:12px;color:var(--faint);padding:46px 0 8px;line-height:1.75;border-top:1px solid var(--hair);margin-top:52px}
+
+/* RESPONSIVE */
+@media (max-width:680px){
+  .yle{font-size:17px;border-radius:0}
+  .yle-body{padding:6px 20px 56px}
+  .yle-hero-inner{padding:64px 22px 56px}
+  .cover-title-main,.cover-title-gold{font-size:38px}
+  .cover-chapter-title{font-size:24px}
+  .cover-quote{font-size:16px}
+  .yle h2{font-size:26px}
+  .three-accounts,.retirement-grid,.hi-grid,.int-cards,.shift-cards-row,.calc-input-row,.tax-compare,.calc-results{grid-template-columns:1fr}
+  .ded-grid{grid-template-columns:1fr 1fr}
+  .rings-row,.obj-stats,.wb-grid,.qcal-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:440px){
+  .rings-row,.obj-stats,.wb-grid,.qcal-grid,.ded-grid{grid-template-columns:1fr}
+}
+</style>
+
+<div class="yle" id="yleRoot">
+
+  <!-- HERO -->
+  <div class="yle-hero">
+    <div class="yle-hero-bg"></div>
+    <div class="yle-hero-grad"></div>
+    <div class="yle-hero-inner">
+      <div class="cover-eyebrow">Nurse Empire Academy · nurseempire.health</div>
+      <span class="cover-title-main">YOUR LICENSE,</span>
+      <span class="cover-title-gold">Your Empire</span>
+      <div class="cover-rule"></div>
+      <div class="cover-chapter-label">Chapter 4</div>
+      <div class="cover-chapter-title">The 1099 Nurse</div>
+      <div class="cover-quote">"Higher rates come with higher responsibility. This chapter covers both."</div>
+      <div class="cover-byline">Alexandra Desbas, MSN, RN · Nurse Empire Academy</div>
+    </div>
+  </div>
+
+  <div class="yle-body">
+
+    <!-- DASHBOARD -->
+    <div class="lesson-dash reveal">
+      <div class="ld-header">
+        <div class="ld-label">Chapter 4 Dashboard</div>
+        <div class="ld-chips">
+          <div class="ld-chip"><div class="ld-dot"></div>Taxes</div>
+          <div class="ld-chip"><div class="ld-dot"></div>Reserves</div>
+          <div class="ld-chip"><div class="ld-dot"></div>Retirement</div>
+          <div class="ld-chip"><div class="ld-dot"></div>Coverage</div>
+        </div>
+      </div>
+      <div class="ld-sub">Before you begin — name what you came here to solve. This is the hardest financial chapter in the course, and the one that protects your income.</div>
+      <div class="int-cards">
+        <button class="int-card" id="int-math" onclick="yleInt(this,'math')">
+          <span class="int-idx">01</span>
+          <div class="int-title">I want the real math</div>
+          <div class="int-text">I want to understand what $85/hr actually nets after self-employment tax — and run my own numbers in the calculator.</div>
+        </button>
+        <button class="int-card" id="int-system" onclick="yleInt(this,'system')">
+          <span class="int-idx">02</span>
+          <div class="int-title">I want the system</div>
+          <div class="int-text">I want the three-account setup and the quarterly calendar so the IRS never surprises me in April.</div>
+        </button>
+        <button class="int-card" id="int-wealth" onclick="yleInt(this,'wealth')">
+          <span class="int-idx">03</span>
+          <div class="int-title">I want to build wealth</div>
+          <div class="int-text">I want to use the retirement accounts, deductions, and health-insurance write-off that self-employment unlocks.</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- WORKBOOK -->
+    <div class="wb-section reveal">
+      <div class="wb-hdr">Chapter 4 Workbook</div>
+      <div class="wb-title">Your 1099 Money Plan</div>
+      <div class="wb-intro">Use these fields to turn the chapter into a plan you can actually run. Pair them with the calculator below. Notes save automatically to your browser.</div>
+      <div class="wb-grid">
+        <div class="wb-field">
+          <label class="wb-lbl">My Projected Annual 1099 Income</label>
+          <textarea class="wb-area" data-key="income" placeholder="Your realistic first-year 1099 number. Use it in the calculator below." oninput="yleSave('income',this.value)"></textarea>
+        </div>
+        <div class="wb-field">
+          <label class="wb-lbl">My Tax Reserve % + Where It Lives</label>
+          <textarea class="wb-area" data-key="reserve" placeholder="The % you'll set aside (25–30%) and the account you'll label 'IRS — Do Not Touch.'" oninput="yleSave('reserve',this.value)"></textarea>
+        </div>
+        <div class="wb-field">
+          <label class="wb-lbl">My Retirement Account Choice</label>
+          <textarea class="wb-area" data-key="retirement" placeholder="Solo 401(k) or SEP-IRA — and roughly how much you'll contribute." oninput="yleSave('retirement',this.value)"></textarea>
+        </div>
+        <div class="wb-field">
+          <label class="wb-lbl">My Health Insurance Plan</label>
+          <textarea class="wb-area" data-key="health" placeholder="ACA marketplace, spouse plan, association plan, or COBRA — and the monthly number." oninput="yleSave('health',this.value)"></textarea>
+        </div>
+        <div class="wb-field" style="grid-column:1/-1">
+          <label class="wb-lbl">My CPA Plan</label>
+          <textarea class="wb-area" data-key="cpa" placeholder="Who will you hire — and when? A CPA who works with self-employed healthcare professionals." oninput="yleSave('cpa',this.value)" style="min-height:64px"></textarea>
+        </div>
+      </div>
+      <div class="wb-saved" id="wbSaved">&#x2713; Notes saved to your browser</div>
+    </div>
+
+    <!-- EMPIRE SHIFT -->
+    <div class="shift-section reveal">
+      <div class="shift-lbl">Empire Shift</div>
+      <div class="shift-sub">Click each card to replace the rookie assumption with the operator's math. Cards stay flipped when you return.</div>
+      <div class="shift-cards-row">
+        <div class="shift-c" onclick="yleFlip(this)">
+          <div class="shift-face">
+            <span class="st-old">Old Thinking</span><span class="st-new">New Thinking &#x2713;</span>
+            <div class="shift-thinking" data-old="$85/hr means I'm making $40 more than my $45/hr job" data-new="$85/hr has to cover the taxes and benefits my employer was quietly paying — I plan around the real take-home">$85/hr means I'm making $40 more than my $45/hr job</div>
+            <div class="shift-hint">Tap to shift &rarr;</div>
+            <div class="shift-check">&#x2713;</div>
+          </div>
+        </div>
+        <div class="shift-c" onclick="yleFlip(this)">
+          <div class="shift-face">
+            <span class="st-old">Old Thinking</span><span class="st-new">New Thinking &#x2713;</span>
+            <div class="shift-thinking" data-old="I'll deal with taxes once a year in April" data-new="I pay estimated taxes four times a year and set aside 25–30% of every payment the day it lands">I'll deal with taxes once a year in April</div>
+            <div class="shift-hint">Tap to shift &rarr;</div>
+            <div class="shift-check">&#x2713;</div>
+          </div>
+        </div>
+        <div class="shift-c" onclick="yleFlip(this)">
+          <div class="shift-face">
+            <span class="st-old">Old Thinking</span><span class="st-new">New Thinking &#x2713;</span>
+            <div class="shift-thinking" data-old="Losing my employer 401(k) match means I'm behind on retirement" data-new="As my own business I can contribute up to $70,000 a year — and deduct it. The ceiling went up, not down">Losing my employer 401(k) match means I'm behind on retirement</div>
+            <div class="shift-hint">Tap to shift &rarr;</div>
+            <div class="shift-check">&#x2713;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOC -->
+    <div class="toc-panel reveal">
+      <div class="toc-panel-title">Table of Contents</div>
+      <div class="toc-panel-sub">Move through once as a class, then return to any section when you are ready to act.</div>
+      <div class="toc-items">
+        <a class="toc-item" data-target="objective"><span class="toc-idx">00</span><div class="toc-info"><span class="toc-t">Chapter Objective</span><span class="toc-s">What you will know by the end of this chapter</span></div><span class="toc-arr">&rarr;</span></a>
+        <a class="toc-item" data-target="s01"><span class="toc-idx">01</span><div class="toc-info"><span class="toc-t">The Real Math</span><span class="toc-s">What $85/hr actually keeps</span></div><span class="toc-arr">&rarr;</span></a>
+        <a class="toc-item" data-target="s02"><span class="toc-idx">02</span><div class="toc-info"><span class="toc-t">Self-Employment Tax</span><span class="toc-s">Why the 15.3% hits hard</span></div><span class="toc-arr">&rarr;</span></a>
+        <a class="toc-item" data-target="s03"><span class="toc-idx">03</span><div class="toc-info"><span class="toc-t">Your 1099 Calculator</span><span class="toc-s">Run your own numbers now</span></div><span class="toc-arr">&rarr;</span></a>
+        <a class="toc-item" data-target="s04"><span class="toc-idx">04</span><div class="toc-info"><span class="toc-t">Quarterly Taxes</span><span class="toc-s">The four dates that run your year</span></div><span class="toc-arr">&rarr;</span></a>
+        <a class="toc-item" data-target="s05"><span class="toc-idx">05</span><div class="toc-info"><span class="toc-t">The Three Accounts</span><span class="toc-s">The system that prevents April surprises</span></div><span class="toc-arr">&rarr;</span></a>
+        <a class="toc-item" data-target="s06"><span class="toc-idx">06</span><div class="toc-info"><span class="toc-t">Retirement Accounts</span><span class="toc-s">Contribute up to $70K a year</span></div><span class="toc-arr">&rarr;</span></a>
+        <a class="toc-item" data-target="s07"><span class="toc-idx">07</span><div class="toc-info"><span class="toc-t">Health Insurance</span><span class="toc-s">Your options and the deduction</span></div><span class="toc-arr">&rarr;</span></a>
+        <a class="toc-item" data-target="s08"><span class="toc-idx">08</span><div class="toc-info"><span class="toc-t">Deductions</span><span class="toc-s">The expenses that lower your tax bill</span></div><span class="toc-arr">&rarr;</span></a>
+      </div>
+    </div>
+
+    <!-- OBJECTIVE -->
+    <div class="obj-panel reveal" id="objective">
+      <div class="obj-kicker">Chapter 4 Objective</div>
+      <div class="obj-title">By the end of this chapter, you will know exactly what you keep, what you owe, and the system that keeps the IRS from surprising you.</div>
+      <div class="obj-text">We cover self-employment tax and why it hits harder than a W-2, an interactive calculator to run your own numbers, the four quarterly payment dates, the three-account system that prevents April surprises, the retirement accounts that let you contribute up to $70,000 a year, your health-insurance options and the deduction most nurses miss, and the business deductions that lower your taxable income.</div>
+      <div class="obj-stats">
+        <div class="obj-stat os1"><b>15.3%</b><small>SE Tax Rate</small></div>
+        <div class="obj-stat os2"><b>4×</b><small>Quarterly</small></div>
+        <div class="obj-stat os3"><b>25–30%</b><small>Set Aside</small></div>
+        <div class="obj-stat os4"><b>$70K</b><small>Retirement Max</small></div>
+      </div>
+      <div class="obj-note">
+        <div class="obj-note-label">How to use this chapter</div>
+        <p>Do the calculator in Section 03 before you read past it — the number changes how the rest of the chapter lands. Then set up the three accounts and put the four quarterly dates in your phone today. None of this is hard once it's a system. The danger is treating it like an afterthought.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 01 -->
+    <div id="s01"></div>
+    <div class="yle-sec"><span class="yle-sec-idx">01</span><span class="yle-sec-label">The Real Math</span><span class="yle-sec-line"></span></div>
+    <div class="yle-read">
+      <h2>The Math Nobody Showed You</h2>
+      <p class="yle-lead">Here is the moment most nurses have when they first look at 1099 income: they see $85 an hour, compare it to their current $45 an hour, and think they are about to make an extra $40 an hour.</p>
+      <p>That math is wrong. Not because $85 is not real — it is. But because that $85 now has to cover things your employer was quietly paying for on your behalf.</p>
+      <p>This chapter shows you the real number. How much you actually keep. What you owe and when. And how to set yourself up so the IRS does not surprise you in April with a bill that erases months of progress.</p>
+    </div>
+
+    <div class="fig-label reveal">Figure 1 — The 1099 Nurse: Key Numbers for 2026</div>
+    <div class="stat-rings reveal">
+      <div class="stat-rings-title">What Every 1099 Nurse Needs to Know — 2026 Figures</div>
+      <div class="rings-row">
+        <div class="ring-card"><div class="ring-outer ro1"><div class="ring-inner"><span class="ring-pct">15.3%</span><span class="ring-unit">SE tax</span></div></div><div class="ring-label">Self-Employment Tax</div><div class="ring-sub">12.4% Social Security + 2.9% Medicare — you pay both halves</div></div>
+        <div class="ring-card"><div class="ring-outer ro2"><div class="ring-inner"><span class="ring-pct">4×</span><span class="ring-unit">per year</span></div></div><div class="ring-label">Quarterly Tax Payments</div><div class="ring-sub">April · June · September · January — miss one and penalties start</div></div>
+        <div class="ring-card"><div class="ring-outer ro3"><div class="ring-inner"><span class="ring-pct">$70K</span><span class="ring-unit">max 2026</span></div></div><div class="ring-label">Solo 401(k) Max Contribution</div><div class="ring-sub">Combined employee + employer contributions for 2026</div></div>
+        <div class="ring-card"><div class="ring-outer ro4"><div class="ring-inner"><span class="ring-pct">25–30%</span><span class="ring-unit">set aside</span></div></div><div class="ring-label">Tax Reserve Target</div><div class="ring-sub">Of every business payment — before you spend a dollar</div></div>
+      </div>
+    </div>
+
+    <!-- SECTION 02 -->
+    <div id="s02"></div>
+    <div class="yle-sec"><span class="yle-sec-idx">02</span><span class="yle-sec-label">Self-Employment Tax</span><span class="yle-sec-line"></span></div>
+    <div class="yle-read">
+      <h2>Self-Employment Tax — What It Is and Why It Hits Hard</h2>
+      <p>When you work as a W-2 employee, your employer splits the Social Security and Medicare taxes with you. You each pay 7.65%. The employer's half never shows up on your pay stub — it just gets paid behind the scenes.</p>
+      <p>When you are a 1099 contractor, there is no employer to split with. <strong>You pay the full 15.3%.</strong> That is 12.4% for Social Security (on income up to $184,500 in 2026) plus 2.9% for Medicare on all income.</p>
+      <p>The good news: you can deduct half of your self-employment tax on your federal income tax return — which reduces your taxable income. But that deduction comes later. The money still leaves your account first.</p>
+    </div>
+
+    <div class="fig-label reveal">Figure 2 — How the 15.3% Self-Employment Tax Breaks Down</div>
+    <div class="tax-vis reveal">
+      <div class="tax-bars-wrap">
+        <div class="tax-bar-item"><div class="tax-bar-meta"><span class="tax-bar-label">Social Security Tax</span><span class="tax-bar-pct" style="color:var(--violet)">12.4% · on income up to $184,500</span></div><div class="tax-track"><div class="tax-fill" data-w="81" style="background:var(--violet)"></div></div></div>
+        <div class="tax-bar-item"><div class="tax-bar-meta"><span class="tax-bar-label">Medicare Tax</span><span class="tax-bar-pct" style="color:var(--teal)">2.9% · on all net SE income</span></div><div class="tax-track"><div class="tax-fill" data-w="19" style="background:var(--teal)"></div></div></div>
+        <div class="tax-bar-item"><div class="tax-bar-meta"><span class="tax-bar-label">Total Self-Employment Tax</span><span class="tax-bar-pct" style="color:var(--gold-light)">15.3% combined</span></div><div class="tax-track"><div class="tax-fill" data-w="100" style="background:linear-gradient(90deg,var(--violet) 81%,var(--teal) 81%)"></div></div></div>
+      </div>
+      <div class="tax-compare">
+        <div class="tc-card"><div class="tc-label">The W-2 Employee (for comparison)</div><div class="tc-val">7.65%</div><div class="tc-note">Employee pays — employer pays the other 7.65%</div></div>
+        <div class="tc-card hl"><div class="tc-label">The 1099 Contractor (you)</div><div class="tc-val">15.3%</div><div class="tc-note">You pay both halves — but can deduct ½ from income tax</div></div>
+      </div>
+    </div>
+    <div class="fig-note reveal">Source: IRS Publication 334 (2026). Social Security wage base $184,500 for 2026. Self-employment tax is calculated on 92.35% of net self-employment income. Consult a CPA for your specific situation.</div>
+
+    <!-- SECTION 03 — CALCULATOR -->
+    <div id="s03"></div>
+    <div class="yle-sec"><span class="yle-sec-idx">03</span><span class="yle-sec-label">Your 1099 Calculator</span><span class="yle-sec-line"></span></div>
+    <div class="yle-read">
+      <h2>Run Your Own Numbers — Right Now</h2>
+      <p>Stop reading for a second and do this. Put in your projected 1099 income and see exactly what your tax picture looks like. This is the calculation nobody runs before they make the leap — and the one that changes everything when you finally do.</p>
+    </div>
+
+    <div class="fig-label reveal">Figure 3 — Interactive 1099 Tax Calculator (2026 Rates)</div>
+    <div class="calculator reveal">
+      <div class="calc-title">Your 1099 Tax Calculator</div>
+      <div class="calc-sub">Enter your projected annual 1099 income and state income tax rate. We estimate your SE tax, quarterly payments, recommended savings, and take-home — using 2026 IRS figures.</div>
+      <div class="calc-input-row">
+        <div class="calc-input-group">
+          <label class="calc-label">Annual 1099 Income ($)</label>
+          <input class="calc-input" id="annualIncome" type="number" inputmode="numeric" placeholder="e.g. 80000" min="0">
+        </div>
+        <div class="calc-input-group">
+          <label class="calc-label">Your State Income Tax Rate (%)</label>
+          <input class="calc-input" id="stateTax" type="number" inputmode="decimal" placeholder="TX = 0 · CA = 9.3" min="0" max="15" step="0.1">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="yleCalc()">Calculate My 1099 Tax Picture &rarr;</button>
+      <div class="calc-error" id="calcError">Please enter your projected annual 1099 income to calculate.</div>
+      <div class="calc-results" id="calcResults">
+        <div class="calc-rcard"><span class="cr-label">Self-Employment Tax (15.3%)</span><span class="cr-value v-coral" id="seTax">—</span><div class="cr-note">Paid on 92.35% of your net SE income. You can deduct half from income tax.</div></div>
+        <div class="calc-rcard hl"><span class="cr-label">Save This Each Quarter</span><span class="cr-value v-gold" id="quarterlyPayment">—</span><div class="cr-note">Your estimated quarterly estimated-tax payment to the IRS.</div></div>
+        <div class="calc-rcard"><span class="cr-label">Recommended Tax Reserve</span><span class="cr-value v-violet" id="taxReserve">—</span><div class="cr-note">Set 28% of every payment into your tax savings account from day one.</div></div>
+        <div class="calc-rcard hl"><span class="cr-label">Estimated Annual Take-Home</span><span class="cr-value v-teal" id="takeHome">—</span><div class="cr-note">After SE tax and estimated federal + state income tax. Before retirement contributions.</div></div>
+      </div>
+      <div class="calc-breakdown" id="calcBreakdown">
+        <div class="breakdown-title">Full Tax Breakdown</div>
+        <div class="breakdown-row"><span class="br-label">Gross 1099 Income</span><span class="br-value" id="bd-gross">—</span></div>
+        <div class="breakdown-row"><span class="br-label">Business Deductions (estimated 15%)</span><span class="br-value red" id="bd-deductions">—</span></div>
+        <div class="breakdown-row"><span class="br-label">Net Self-Employment Income</span><span class="br-value" id="bd-net">—</span></div>
+        <div class="breakdown-row"><span class="br-label">Self-Employment Tax (15.3% of 92.35%)</span><span class="br-value red" id="bd-se">—</span></div>
+        <div class="breakdown-row"><span class="br-label">SE Tax Deduction (½ of SE tax)</span><span class="br-value green" id="bd-seded">—</span></div>
+        <div class="breakdown-row"><span class="br-label">Adjusted Gross Income</span><span class="br-value" id="bd-agi">—</span></div>
+        <div class="breakdown-row"><span class="br-label">Federal Income Tax (estimated)</span><span class="br-value red" id="bd-fed">—</span></div>
+        <div class="breakdown-row"><span class="br-label">State Income Tax</span><span class="br-value red" id="bd-state">—</span></div>
+        <div class="breakdown-row" style="border-top:1px solid rgba(200,161,80,.3);margin-top:6px;padding-top:12px"><span class="br-label" style="color:var(--gold);font-weight:700">Estimated Take-Home</span><span class="br-value green" id="bd-takehome">—</span></div>
+      </div>
+      <div class="calc-disclaimer">This calculator provides estimates for educational purposes only and uses simplified tax calculations. Actual taxes depend on your specific deductions, filing status, state, and other income. Always work with a licensed CPA. For Texas residents: state income tax = 0%.</div>
+    </div>
+
+    <!-- SECTION 04 — QUARTERLY -->
+    <div id="s04"></div>
+    <div class="yle-sec"><span class="yle-sec-idx">04</span><span class="yle-sec-label">Quarterly Taxes</span><span class="yle-sec-line"></span></div>
+    <div class="yle-read">
+      <h2>Quarterly Taxes — The Four Dates That Run Your Year</h2>
+      <p>As a 1099 contractor, the IRS expects you to pay taxes four times a year — not once in April. Missing a quarterly payment triggers an underpayment penalty, even if you pay in full at tax time. Put these dates in your phone right now.</p>
+    </div>
+
+    <div class="fig-label reveal">Figure 4 — 2026 Quarterly Tax Payment Calendar</div>
+    <div class="qcal reveal">
+      <div class="qcal-grid">
+        <div class="qcal-card qc1"><div class="qcal-top"><div class="qcal-quarter">Q1 Payment</div><div class="qcal-date">April 15, 2026</div></div><div class="qcal-body"><div class="qcal-period">Covers income earned Jan 1 – March 31</div><div class="qcal-tip">Same day as your annual return. Two due dates in one — plan ahead.</div></div></div>
+        <div class="qcal-card qc2"><div class="qcal-top"><div class="qcal-quarter">Q2 Payment</div><div class="qcal-date">June 15, 2026</div></div><div class="qcal-body"><div class="qcal-period">Covers income earned April 1 – May 31</div><div class="qcal-tip">Only two months of income — shorter window. Set money aside weekly.</div></div></div>
+        <div class="qcal-card qc3"><div class="qcal-top"><div class="qcal-quarter">Q3 Payment</div><div class="qcal-date">Sept 15, 2026</div></div><div class="qcal-body"><div class="qcal-period">Covers income earned June 1 – Aug 31</div><div class="qcal-tip">Summer quarter. Three months. Consistent income tracking is essential.</div></div></div>
+        <div class="qcal-card qc4"><div class="qcal-top"><div class="qcal-quarter">Q4 Payment</div><div class="qcal-date">Jan 15, 2027</div></div><div class="qcal-body"><div class="qcal-period">Covers income earned Sept 1 – Dec 31</div><div class="qcal-tip">Holiday season = higher spending. Do not touch your tax reserve in Q4.</div></div></div>
+      </div>
+      <div class="qcal-pay">
+        <b>Pay via: </b><span>IRS Direct Pay at IRS.gov (free, instant) or EFTPS.gov (Electronic Federal Tax Payment System). Set up EFTPS before your first quarterly payment — it takes a few days to activate. Texas has no state income tax, so no state quarterly payments are required.</span>
+      </div>
+    </div>
+
+    <!-- SECTION 05 — THREE ACCOUNTS -->
+    <div id="s05"></div>
+    <div class="yle-sec"><span class="yle-sec-idx">05</span><span class="yle-sec-label">The Three Accounts</span><span class="yle-sec-line"></span></div>
+    <div class="yle-read">
+      <h2>The Three Accounts You Open Before Your First Check Clears</h2>
+      <p>This is the system that keeps nurses from getting blindsided in April. Three separate accounts. One simple rule for each. Set it up once and it runs on autopilot.</p>
+    </div>
+
+    <div class="fig-label reveal">Figure 5 — Your Three-Account System</div>
+    <div class="three-accounts reveal">
+      <div class="account-card ac1"><div class="ac-top"><span class="ac-num">1</span><div class="ac-name">Business Operating Account</div><div class="ac-type">Your main business checking</div></div><div class="ac-body"><div class="ac-rule">All client payments land here first</div><div class="ac-desc">Every invoice you send gets paid into this account. From here, you immediately transfer your tax reserve and retirement contribution. What remains is your operating income to pay yourself and cover business expenses.</div></div></div>
+      <div class="account-card ac2"><div class="ac-top"><span class="ac-num">2</span><div class="ac-name">Tax Reserve Account</div><div class="ac-type">Business savings — do not touch</div></div><div class="ac-body"><div class="ac-rule">Transfer 25–30% of every payment immediately</div><div class="ac-desc">Set up an automatic transfer the moment a payment clears. This money does not exist for spending. It exists for your quarterly IRS payments. When April comes, you are prepared instead of panicked. Relay lets you label sub-accounts — name this one "IRS — Do Not Touch."</div></div></div>
+      <div class="account-card ac3"><div class="ac-top"><span class="ac-num">3</span><div class="ac-name">Retirement Account</div><div class="ac-type">Solo 401(k) or SEP-IRA</div></div><div class="ac-body"><div class="ac-rule">Contribute from every payment — even small amounts</div><div class="ac-desc">No employer is contributing to your retirement anymore. That is now your responsibility — and your opportunity. Contributions to a Solo 401(k) or SEP-IRA reduce your taxable income dollar for dollar. Every dollar saves you money in taxes this year and builds wealth for the future.</div></div></div>
+    </div>
+
+    <!-- SECTION 06 — RETIREMENT -->
+    <div id="s06"></div>
+    <div class="yle-sec"><span class="yle-sec-idx">06</span><span class="yle-sec-label">Retirement Accounts</span><span class="yle-sec-line"></span></div>
+    <div class="yle-read">
+      <h2>Building Wealth — Retirement Accounts for Self-Employed Nurses</h2>
+      <p>One of the most overlooked advantages of self-employment: as a 1099 contractor, you can contribute dramatically more to retirement accounts than you could as a W-2 employee. A traditional 401(k) through an employer caps your contribution at $23,500 in 2026. As a self-employed business owner, your total ceiling is $70,000.</p>
+      <p>These contributions are tax-deductible — they reduce your taxable income in the year you make them. That means saving for retirement and lowering your tax bill simultaneously.</p>
+    </div>
+
+    <div class="fig-label reveal">Figure 6 — Retirement Account Options for 1099 Nurses (2026)</div>
+    <div class="retirement-grid reveal">
+      <div class="ret-card">
+        <div class="ret-top r1"><div class="ret-name">Solo 401(k)</div><div class="ret-tagline">Best for nurses with consistent 1099 income — highest contribution ceiling</div></div>
+        <div class="ret-body">
+          <div class="ret-row"><span class="ret-rl">Employee contribution limit</span><span class="ret-rv big">$23,500</span></div>
+          <div class="ret-row"><span class="ret-rl">+ Employer contribution</span><span class="ret-rv">Up to 25% of net SE income</span></div>
+          <div class="ret-row"><span class="ret-rl">Total combined limit 2026</span><span class="ret-rv big">$70,000</span></div>
+          <div class="ret-row"><span class="ret-rl">Catch-up (age 50+)</span><span class="ret-rv">$7,500 additional</span></div>
+          <div class="ret-row"><span class="ret-rl">Setup</span><span class="ret-rv">Open before Dec 31 · Fidelity, Vanguard, Schwab</span></div>
+          <div class="ret-row"><span class="ret-rl">Best for</span><span class="ret-rv">Nurses earning $60K+ in 1099 income</span></div>
+        </div>
+      </div>
+      <div class="ret-card">
+        <div class="ret-top r2"><div class="ret-name">SEP-IRA</div><div class="ret-tagline">Simpler to set up — great for nurses just starting their 1099 practice</div></div>
+        <div class="ret-body">
+          <div class="ret-row"><span class="ret-rl">Contribution limit 2026</span><span class="ret-rv big">$70,000</span></div>
+          <div class="ret-row"><span class="ret-rl">How it's calculated</span><span class="ret-rv">Up to 25% of net SE income</span></div>
+          <div class="ret-row"><span class="ret-rl">Contribution deadline</span><span class="ret-rv">Tax deadline incl. extensions</span></div>
+          <div class="ret-row"><span class="ret-rl">Catch-up (age 50+)</span><span class="ret-rv">None for SEP-IRA</span></div>
+          <div class="ret-row"><span class="ret-rl">Setup</span><span class="ret-rv">Simple paperwork · any brokerage</span></div>
+          <div class="ret-row"><span class="ret-rl">Best for</span><span class="ret-rv">Newer to 1099 or variable income</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="fig-note reveal">Source: IRS Publication 560 (2026), Retirement Plans for Self-Employed People. Contribution limits are subject to annual adjustment. Consult a financial advisor for specific guidance. Both accounts allow tax-deferred growth — you pay taxes when you withdraw in retirement.</div>
+
+    <!-- SECTION 07 — HEALTH INSURANCE -->
+    <div id="s07"></div>
+    <div class="yle-sec"><span class="yle-sec-idx">07</span><span class="yle-sec-label">Health Insurance</span><span class="yle-sec-line"></span></div>
+    <div class="yle-read">
+      <h2>Health Insurance — You Are On Your Own Now (Here's What to Do)</h2>
+      <p>This is the one that trips people up most. As a W-2 employee your employer was likely covering a significant portion of your health insurance premium. As a 1099 contractor that cost is entirely yours — but it is also 100% tax-deductible as a self-employed person, which reduces the real after-tax cost meaningfully.</p>
+    </div>
+
+    <div class="fig-label reveal">Figure 7 — Health Insurance Options for Independent Nurses</div>
+    <div class="hi-grid reveal">
+      <div class="hi-card"><div class="hi-stripe hi-s1"></div><div><div class="hi-name">ACA Marketplace (Healthcare.gov)</div><div class="hi-desc">Gold or Silver plans available. Income-based subsidies may apply. Open Enrollment Nov 1 – Jan 15. Special Enrollment if you lose job-based coverage — you have 60 days to enroll.</div><span class="hi-cost">$300–$600/mo avg before subsidies</span></div></div>
+      <div class="hi-card"><div class="hi-stripe hi-s2"></div><div><div class="hi-name">Spouse or Domestic Partner Coverage</div><div class="hi-desc">If your spouse or partner has employer-sponsored insurance, joining their plan is often the most cost-effective option. Compare the premium difference before assuming the marketplace is cheaper.</div><span class="hi-cost">Varies — often lowest out-of-pocket</span></div></div>
+      <div class="hi-card"><div class="hi-stripe hi-s3"></div><div><div class="hi-name">Professional Association Plans</div><div class="hi-desc">AONL, ANA, and some state nursing associations offer group health plans for members. Rates are often competitive with ACA marketplace plans and sometimes better. Worth checking your memberships.</div><span class="hi-cost">$200–$500/mo depending on plan</span></div></div>
+      <div class="hi-card"><div class="hi-stripe hi-s4"></div><div><div class="hi-name">COBRA (Bridge Coverage)</div><div class="hi-desc">Continue your current employer coverage for up to 18 months after leaving. You pay the full premium including the employer's share. Expensive — but provides continuity without a gap while you shop.</div><span class="hi-cost">$600–$1,200/mo — temporary only</span></div></div>
+    </div>
+    <div class="callout">
+      <strong>The Tax Deduction Most Nurses Miss</strong>
+      Self-employed individuals can deduct 100% of health insurance premiums paid for themselves and their families from their federal income tax. This is an above-the-line deduction — meaning you do not have to itemize to claim it. On a $600/month premium, that is a $7,200 annual deduction. Source: IRS Publication 535.
+    </div>
+
+    <!-- SECTION 08 — DEDUCTIONS -->
+    <div id="s08"></div>
+    <div class="yle-sec"><span class="yle-sec-idx">08</span><span class="yle-sec-label">Deductions</span><span class="yle-sec-line"></span></div>
+    <div class="yle-read">
+      <h2>Business Deductions — The Expenses That Lower Your Tax Bill</h2>
+      <p>One of the most significant advantages of being a business owner: legitimate business expenses reduce your taxable income. You are not paying taxes on gross income — you are paying taxes on profit (income minus deductions). Here are the deductions most relevant to nurse entrepreneurs.</p>
+    </div>
+
+    <div class="fig-label reveal">Figure 8 — Common Business Deductions for Nurse Entrepreneurs</div>
+    <div class="ded-grid reveal">
+      <div class="ded-card"><span class="ded-idx">01</span><div class="ded-name">Business Mileage</div><div class="ded-detail">IRS standard rate for 2026. Track every mile driven for business. Apps: MileIQ or Everlance.</div></div>
+      <div class="ded-card"><span class="ded-idx">02</span><div class="ded-name">Home Office</div><div class="ded-detail">Space used regularly and exclusively for your business. Simplified method: $5/sq ft up to 300 sq ft.</div></div>
+      <div class="ded-card"><span class="ded-idx">03</span><div class="ded-name">Continuing Education</div><div class="ded-detail">CE courses, certifications, license renewal fees, professional books, and online courses related to your work.</div></div>
+      <div class="ded-card"><span class="ded-idx">04</span><div class="ded-name">Health Insurance Premiums</div><div class="ded-detail">100% deductible for self-employed. Covers you, spouse, and dependents. Cannot exceed your net business income.</div></div>
+      <div class="ded-card"><span class="ded-idx">05</span><div class="ded-name">Professional Insurance</div><div class="ded-detail">Malpractice, general liability, cyber liability — all fully deductible as ordinary business expenses.</div></div>
+      <div class="ded-card"><span class="ded-idx">06</span><div class="ded-name">Phone &amp; Internet</div><div class="ded-detail">The business-use percentage of your phone bill and home internet. Track and document the business-use percentage.</div></div>
+      <div class="ded-card"><span class="ded-idx">07</span><div class="ded-name">Software &amp; AI Tools</div><div class="ded-detail">Claude Pro, ChatGPT Plus, QuickBooks, scheduling tools — any software used for your business is deductible.</div></div>
+      <div class="ded-card"><span class="ded-idx">08</span><div class="ded-name">LLC &amp; Legal Fees</div><div class="ded-detail">LLC filing fees, registered agent fees, attorney fees for contracts, and accounting fees are all deductible.</div></div>
+      <div class="ded-card"><span class="ded-idx">09</span><div class="ded-name">Travel &amp; Conferences</div><div class="ded-detail">Flights, hotels, meals (50%), and registration fees for business-related conferences and professional events.</div></div>
+    </div>
+    <div class="callout">
+      <strong>Document Everything</strong>
+      The IRS does not accept your memory. Keep digital receipts for every business expense. Apps like Expensify or a dedicated Google Drive folder work well. Business mileage requires a log with date, destination, business purpose, and miles. Start tracking from your first day of business — not after.
+    </div>
+
+    <!-- KNOWLEDGE CHECKS -->
+    <div class="yle-sec"><span class="yle-sec-idx">09</span><span class="yle-sec-label">Knowledge Checks</span><span class="yle-sec-line"></span></div>
+    <div class="yle-read"><h2>Confirm You Have the Math</h2></div>
+
+    <div class="quiz-block">
+      <div class="quiz-num">Quick Check 1</div>
+      <div class="quiz-q">Why is the self-employment tax 15.3% instead of the 7.65% a W-2 employee sees?</div>
+      <button class="quiz-opt" data-correct="false" onclick="yleAnswer(this)">1099 contractors are taxed at a punitive higher rate by law.</button>
+      <button class="quiz-opt" data-correct="true" onclick="yleAnswer(this)">There is no employer to split it with, so you pay both halves — but you can deduct half of it from your income tax.</button>
+      <button class="quiz-opt" data-correct="false" onclick="yleAnswer(this)">It includes state income tax, which W-2 employees don't pay.</button>
+      <div class="quiz-fb"></div>
+    </div>
+
+    <div class="quiz-block">
+      <div class="quiz-num">Quick Check 2</div>
+      <div class="quiz-q">What is the single habit that prevents an April tax surprise?</div>
+      <button class="quiz-opt" data-correct="false" onclick="yleAnswer(this)">Filing your return as early as possible each year.</button>
+      <button class="quiz-opt" data-correct="true" onclick="yleAnswer(this)">Transferring 25–30% of every payment into a separate tax-reserve account the moment it clears.</button>
+      <button class="quiz-opt" data-correct="false" onclick="yleAnswer(this)">Keeping all your income in one account so it's easy to find.</button>
+      <div class="quiz-fb"></div>
+    </div>
+
+    <div class="quiz-block">
+      <div class="quiz-num">Quick Check 3</div>
+      <div class="quiz-q">As a self-employed nurse, what is your 2026 retirement contribution ceiling through a Solo 401(k) or SEP-IRA?</div>
+      <button class="quiz-opt" data-correct="false" onclick="yleAnswer(this)">$23,500 — the same as an employee 401(k).</button>
+      <button class="quiz-opt" data-correct="false" onclick="yleAnswer(this)">$7,000 — the same as a Roth IRA.</button>
+      <button class="quiz-opt" data-correct="true" onclick="yleAnswer(this)">Up to $70,000 — and those contributions reduce your taxable income.</button>
+      <div class="quiz-fb"></div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary-box reveal">
+      <div class="summary-title">Chapter 4 — The Key Points</div>
+      <div class="summary-item"><div class="sum-bullet">1</div><div class="sum-text"><strong>Self-employment tax is 15.3%</strong> — 12.4% Social Security + 2.9% Medicare. You pay both halves. You can deduct half from your federal income tax. Source: IRS Publication 334 (2026).</div></div>
+      <div class="summary-item"><div class="sum-bullet">2</div><div class="sum-text"><strong>Four quarterly payments per year.</strong> April 15 · June 15 · September 15 · January 15. Missing one triggers penalties. Pay via IRS Direct Pay at IRS.gov — it's free.</div></div>
+      <div class="summary-item"><div class="sum-bullet">3</div><div class="sum-text"><strong>Set aside 25–30% of every payment immediately.</strong> Before you spend anything. Into a separate account labeled "Tax Reserve." This one habit prevents every April surprise.</div></div>
+      <div class="summary-item"><div class="sum-bullet">4</div><div class="sum-text"><strong>Open three accounts:</strong> operating checking, tax reserve savings, and a retirement account (Solo 401(k) or SEP-IRA). Set up all three before your first client payment clears.</div></div>
+      <div class="summary-item"><div class="sum-bullet">5</div><div class="sum-text"><strong>You can contribute up to $70,000 to retirement in 2026</strong> through a Solo 401(k) or SEP-IRA. Every dollar contributed reduces your taxable income. Source: IRS Publication 560 (2026).</div></div>
+      <div class="summary-item"><div class="sum-bullet">6</div><div class="sum-text"><strong>Health insurance premiums are 100% deductible</strong> for self-employed individuals. Explore ACA marketplace, spouse coverage, or professional association plans. Source: IRS Publication 535.</div></div>
+      <div class="summary-item"><div class="sum-bullet">7</div><div class="sum-text"><strong>Hire a CPA.</strong> Not a tax-prep service — a CPA who works with self-employed healthcare professionals. The right CPA pays for themselves many times over in deductions you would have missed.</div></div>
+    </div>
+
+    <!-- ACTION MISSION -->
+    <div class="action-mission">
+      <div class="am-lbl">Action Mission · Chapter 4</div>
+      <div class="am-title">Make the math real this week</div>
+      <div class="am-sub">Run your number in the calculator, then name the one money system you will set up first — the tax-reserve account, the four calendar reminders, or a call with a CPA. Write it and the day.</div>
+      <textarea class="am-area" data-key="action" placeholder="This week I will set up..." oninput="yleSave('action',this.value)"></textarea>
+    </div>
+
+    <!-- CTA -->
+    <div class="chapter-cta">
+      <div class="cta-pre">Chapter 4 complete — the hardest financial chapter in this course</div>
+      <div class="cta-title">Continue to Chapter 5 — Nursing Insurance</div>
+      <p class="cta-sub">What coverage you need, what it costs, and the one policy every independent nurse must have before seeing a single client.</p>
+    </div>
+
+    <!-- REFLECTION JOURNAL -->
+    <div class="rj">
+      <div class="rj-lbl">Reflection Journal · Chapter 4</div>
+      <div class="rj-title">After seeing your real take-home number — does the leap feel more or less possible than before?</div>
+      <textarea class="rj-area" data-key="reflection" placeholder="Write honestly. Did the calculator number surprise you? What does it change about your plan — your rate, your timeline, your reserve?" oninput="yleSave('reflection',this.value)"></textarea>
+      <div class="rj-note">Your reflection saves automatically. Return to it once you've set up your three accounts.</div>
+    </div>
+
+    <div class="footer-credit">
+      Your License, Your Empire · Chapter 4 · Alexandra Desbas, MSN, RN · Nurse Empire Academy<br>
+      &copy; 2026 Nurse Empire Academy. All rights reserved. For enrolled students only.<br>
+      Financial disclaimer: This chapter provides general educational information and is not tax or financial advice. Work with a licensed CPA and financial advisor for guidance specific to your situation. Figures from IRS Publications 334, 535, and 560 (2026).
+    </div>
+
+  </div><!-- /yle-body -->
+</div><!-- /yle -->
+
+<script>
+(function(){
+  var root = document.getElementById('yleRoot');
+  if(!root) return;
+  root.classList.add('yle-anim');
+
+  var revEls = root.querySelectorAll('.reveal');
+  function fillBars(){ root.querySelectorAll('.tax-fill[data-w]').forEach(function(b,i){ setTimeout(function(){ b.style.width = b.getAttribute('data-w')+'%'; }, 150 + i*120); }); }
+  function revealAll(){
+    root.classList.add('yle-shown');
+    root.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
+    root.querySelectorAll('.ring-card,.qcal-card,.account-card,.hi-card,.ded-card').forEach(function(c){ c.classList.add('animated'); });
+    fillBars();
+  }
+  if('IntersectionObserver' in window){
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); ro.unobserve(e.target); } });
+    },{threshold:0.12});
+    revEls.forEach(function(el){ ro.observe(el); });
+    setTimeout(revealAll, 1100);
+    window.addEventListener('scroll', revealAll, { once:true, passive:true });
+  } else { revealAll(); }
+
+  function stagger(sel,childSel,step){
+    var sec = root.querySelector(sel);
+    if(!sec) return;
+    if('IntersectionObserver' in window){
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){
+          root.querySelectorAll(childSel).forEach(function(c,i){ setTimeout(function(){ c.classList.add('animated'); }, i*step); });
+          obs.disconnect();
+        }});
+      },{threshold:0.2});
+      obs.observe(sec);
+    } else { root.querySelectorAll(childSel).forEach(function(c){ c.classList.add('animated'); }); }
+  }
+  stagger('.stat-rings','.ring-card',130);
+  stagger('.qcal','.qcal-card',130);
+  stagger('.three-accounts','.account-card',160);
+  stagger('.hi-grid','.hi-card',110);
+  stagger('.ded-grid','.ded-card',70);
+  var tv = root.querySelector('.tax-vis');
+  if(tv && 'IntersectionObserver' in window){
+    var tObs = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ fillBars(); tObs.disconnect(); } }); },{threshold:0.25});
+    tObs.observe(tv);
+  }
+
+  root.querySelectorAll('.toc-item').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var t = document.getElementById(a.getAttribute('data-target'));
+      if(t){ var y = t.getBoundingClientRect().top + window.pageYOffset - 24; window.scrollTo({ top:y, behavior:'smooth' }); }
+    });
+  });
+
+  /* 1099 TAX CALCULATOR */
+  function fmt(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+  window.yleCalc = function(){
+    var gross = parseFloat(document.getElementById('annualIncome').value) || 0;
+    var stateRate = parseFloat(document.getElementById('stateTax').value) || 0;
+    var err = document.getElementById('calcError');
+    if(gross <= 0){ err.classList.add('show'); return; }
+    err.classList.remove('show');
+
+    var deductions = gross * 0.15;
+    var netSE = gross - deductions;
+    var seTax = (netSE * 0.9235) * 0.153;
+    var seDed = seTax / 2;
+    var agi = netSE - seDed;
+    var fedTax = 0;
+    if (agi > 578125) { fedTax = 174238.25 + (agi - 578125) * 0.37; }
+    else if (agi > 231250) { fedTax = 52832 + (agi - 231250) * 0.35; }
+    else if (agi > 197300) { fedTax = 41323.5 + (agi - 197300) * 0.32; }
+    else if (agi > 100525) { fedTax = 17168.5 + (agi - 100525) * 0.24; }
+    else if (agi > 47150) { fedTax = 5426.5 + (agi - 47150) * 0.22; }
+    else if (agi > 11600) { fedTax = 1160 + (agi - 11600) * 0.12; }
+    else { fedTax = agi * 0.10; }
+    var stateTaxAmt = agi * (stateRate / 100);
+    var totalTax = seTax + fedTax + stateTaxAmt;
+    var takeHome = gross - totalTax - deductions;
+    var taxReserve = gross * 0.28;
+    var quarterlyPmt = totalTax / 4;
+
+    document.getElementById('calcResults').classList.add('show');
+    document.getElementById('calcBreakdown').classList.add('show');
+    document.getElementById('seTax').textContent = fmt(seTax);
+    document.getElementById('quarterlyPayment').textContent = fmt(quarterlyPmt);
+    document.getElementById('taxReserve').textContent = fmt(taxReserve);
+    document.getElementById('takeHome').textContent = fmt(takeHome);
+    document.getElementById('bd-gross').textContent = fmt(gross);
+    document.getElementById('bd-deductions').textContent = '-' + fmt(deductions);
+    document.getElementById('bd-net').textContent = fmt(netSE);
+    document.getElementById('bd-se').textContent = '-' + fmt(seTax);
+    document.getElementById('bd-seded').textContent = '+' + fmt(seDed);
+    document.getElementById('bd-agi').textContent = fmt(agi);
+    document.getElementById('bd-fed').textContent = '-' + fmt(fedTax);
+    document.getElementById('bd-state').textContent = stateRate > 0 ? '-' + fmt(stateTaxAmt) : '$0 (no state tax)';
+    document.getElementById('bd-takehome').textContent = fmt(takeHome);
+  };
+  ['annualIncome','stateTax'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('keydown', function(e){ if(e.key === 'Enter') window.yleCalc(); });
+  });
+
+  window.yleAnswer = function(btn){
+    var block = btn.closest('.quiz-block');
+    block.querySelectorAll('.quiz-opt').forEach(function(o){ o.disabled=true; o.classList.remove('correct','wrong'); });
+    var ok = btn.getAttribute('data-correct') === 'true';
+    btn.classList.add(ok ? 'correct' : 'wrong');
+    if(!ok){ var right = block.querySelector('.quiz-opt[data-correct="true"]'); if(right) right.classList.add('correct'); }
+    var fb = block.querySelector('.quiz-fb');
+    fb.className = 'quiz-fb show ' + (ok ? 'ok' : 'no');
+    fb.textContent = ok ? '\u2713 Correct — that is the operator\u2019s answer.' : 'Not quite. Review the highlighted answer and connect it to the concept before moving on.';
+  };
+
+  window.yleInt = function(card,type){
+    root.querySelectorAll('.int-card').forEach(function(c){ c.classList.remove('selected'); });
+    card.classList.add('selected');
+    try{ localStorage.setItem('nea_ch4_intention', type); }catch(e){}
+  };
+
+  window.yleFlip = function(card){
+    var t = card.querySelector('.shift-thinking');
+    card.classList.toggle('flipped');
+    if(t) t.textContent = card.classList.contains('flipped') ? t.getAttribute('data-new') : t.getAttribute('data-old');
+    try{ var s=[]; root.querySelectorAll('.shift-c').forEach(function(c,i){ if(c.classList.contains('flipped')) s.push(i); }); localStorage.setItem('nea_ch4_shifts', JSON.stringify(s)); }catch(e){}
+  };
+
+  window.yleSave = function(key,val){
+    try{ localStorage.setItem('nea_ch4_'+key, val); }catch(e){}
+    var n = document.getElementById('wbSaved');
+    if(n){ n.classList.add('show'); clearTimeout(n._t); n._t = setTimeout(function(){ n.classList.remove('show'); }, 1800); }
+  };
+
+  try{
+    root.querySelectorAll('[data-key]').forEach(function(el){ var v = localStorage.getItem('nea_ch4_'+el.getAttribute('data-key')); if(v) el.value = v; });
+    var intent = localStorage.getItem('nea_ch4_intention');
+    if(intent){ var ie = document.getElementById('int-'+intent); if(ie) ie.classList.add('selected'); }
+    var shifts = JSON.parse(localStorage.getItem('nea_ch4_shifts') || '[]');
+    root.querySelectorAll('.shift-c').forEach(function(c,i){ if(shifts.indexOf(i)!==-1){ c.classList.add('flipped'); var t=c.querySelector('.shift-thinking'); if(t) t.textContent=t.getAttribute('data-new'); } });
+  }catch(e){}
+})();
+</script>
+<!-- =========================== PASTE END =========================== -->
+
+</body>
+</html>
